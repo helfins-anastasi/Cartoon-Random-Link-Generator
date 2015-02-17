@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Random Simpsons Episode Link Generator</title>
+		<script src="run.js"></script>
+		<style>
+			* { font-family:sans-serif; }
+			h1 { margin-left:20px; }		
+			div { margin-left:200px; }
+			img { display:block; margin-left:20px; margin-bottom:10px; margin-top:-10px; }
+			p.inlineClass { display:inline; }
+			div.topMargin { margin-top:30px; }
+			#needsIndent { margin-left:100px; }
+			#lessIndent { margin-left:190px; }
+		</style>
+	</head>
+	<body onload="go();">
+		<h1>Random Simpsons Episode</h1>
+		<img src="image.jpg" alt="The Simpsons" width="400">
+		<p class=inlineClass id="needsIndent">Season range: from </p>
+		<select id="season1" onchange="changeSeasonStart();"></select>
+		<p class=inlineClass> to </p>
+		<select id="season2" onchange="changeSeasonEnd();"></select>
+		<div class="topMargin">
+			<button onclick="new Link();">Make link!</button>
+		</div>
+		<h5 id="linkHolder"></h3>
+		<div class="topMargin" id="lessIndent">
+			<button onclick="continuousEpisodes();">Play on repeat!</button>
+		</div>
+	</body>
+</html>
